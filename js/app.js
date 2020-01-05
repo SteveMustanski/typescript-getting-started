@@ -1,4 +1,12 @@
 "use strict";
+var Player = (function () {
+    function Player() {
+    }
+    Player.prototype.formatName = function () {
+        return this.name.toUpperCase();
+    };
+    return Player;
+}());
 function startGame() {
     var playerName = getInputValue('playername');
     logPlayer(playerName);
@@ -26,4 +34,7 @@ var logMessage = function (message) { return console.log(message); };
 function logError(err) {
     console.error(err);
 }
+var firstPlayer = new Player();
+firstPlayer.name = 'Anna';
+console.log(firstPlayer.formatName());
 //# sourceMappingURL=app.js.map
