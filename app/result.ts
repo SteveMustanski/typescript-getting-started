@@ -1,4 +1,4 @@
-interface Result {
+export interface Result {
   playerName: String;
   score: number;
   problemCount: number;
